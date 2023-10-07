@@ -14,6 +14,8 @@ win = GraphWin("Points and shapes")
 
 'drawing a point (0.0 is located at the top left corner of the canvas)'
 p = Point(10,10)
+
+'point object methods: return the cordinates'
 p.getX()
 p.getY()
 p.draw(win)
