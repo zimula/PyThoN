@@ -1,0 +1,71 @@
+GIT: a version control tool
+- multiple branches
+1. configuration: 
+a. name: git config --global user.name "name"
+b. email: git cofig --global user.email email
+c. default branch name: git confit --global init.default branch main
+	- git cofig help: git config -h 
+2. create local repository: git init
+3. repository status: git status
+	- show tracked and untracked files. 
+4. track file: git add file
+	- adds files to tracking list. 
+	- track all files: git add --all or git add . 
+		-except ignored.
+5. untrack files: git rm --cached file
+6. ignore files: 
+	- create file.txt named .gitignore. 
+	- add file name to txt file.
+	- comments: #comment 
+	- guide: github.com/github/gitignore
+	-clear screen: cls
+7. committing: taking a snapshot of repository at given time
+		git commit -m "message"
+8. after changes: check status
+	-git show what has been modified. 
+9. see exact changes: git diff
+	-add changes to tracking: git add file
+	- file goes to staging until commit
+		system mad up 3 parts. 
+			- working file
+			- staging
+			- commit: log
+10. remove from staging: git restore --staged file
+11. skip staging: git -a -m "message"
+12. delete file: git rm "file" or do it through explorer
+13. restore file: git restore "file"
+14. rename file: git mv "original name" "new name"  (then add to staging and commit)
+15. tracking commits: git log
+	- displays commits and messages. 
+	- one line log: git log --oneline
+16. See exact changes: git log -p
+ADDITIONAL BRANCHES: copy of main branch that can be merged. 
+17. create branch: git branch branch_name
+	- add a new branch
+	- check existing branches: git branch
+	- *: shows active branch
+	- switch branch: git switch branch_name
+		- make changes
+		- git commit: git commit -a -m "message"
+18. bringe changes to main: git merge -m "merge branch with main" branch_name
+19. deleting branch: git branch -d branch_name
+18. dealing with merge conflicts:
+		- all changes are add to the file (<<<<<<<<<<<<HEAD>>>>>>>>>>) 
+		- open it to fix and save
+		- return to terminal and try merging again. 
+HOSTING REPOSITORY ON GITHUB
+19. pushing existing repo: 
+	a. git remote add origin site_link
+	b. git branch -M main
+	c. git push -u origin main
+20. get repo from sit: 
+	a. git init
+	b. git add README.md	
+	c. git commit -m "message"
+	d. git branch -M main
+	e. git remote add origin site_link
+	f. git push -u origin main
+21. pushing all branches: git push --all
+22. get from site: get fetch
+23. easiest way to pull and merge: git pull
+	

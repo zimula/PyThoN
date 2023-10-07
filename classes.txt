@@ -1,0 +1,154 @@
+1. Creating classes: away to group data and functions (attributes and methods)
+	- syntax: 
+		class Employee:
+			pass
+
+1.1. Instance of a class: 
+	- every single employee is an instance of the employee class
+		emp_1 = Employee()
+		emp_2 = Employee()
+
+1.2. Displaying objects
+	print(emp_1)
+	print(emp_2)
+
+1.3. Adding data to instances on the go. Without out constructor
+	emp_1.first = "Test"
+	emp_1.last = "User"
+	emp_1.email = "mail@mail.com"
+	emp_1.pay = 5000
+	emp_2.first = "Test"
+	emp_2.last = "User1"
+	emp_2.email = "mail2@mail.com"
+	emp_2.pay = 7000
+
+1.4. print out with data
+	print(emp1.pay)
+__________________________________________________________________________
+2. Constructor: def __init__(self): Used to instantiate objects from class. 
+	class Employee:
+		def __init__(self, first, last, pay)
+			self.first = first
+			self.last = last
+		#use name to generate email 
+			self.email = firs + "."+ last + "@email.com"
+			self.pay = pay
+
+
+2.1. instantiate using constructor: 
+	emp_1 = Employee("Test", "User", 5000)
+	emp_2 = Employee("Test", "User1", 7000)
+
+2.1.1: test with print
+	print(emp_1.email)
+	print(emp_2.email)
+
+___________________________________________________________________________	
+3. Methods outside the class. 
+	print('{} {}'.format(emp_1.first, emp_1.email))
+
+3.1: Methods in class: 
+	class Employee:
+		def __init__(self, first, last, pay)
+			self.first = first
+			self.last = last 
+			self.email = firs + "."+ last + "@email.com"
+			self.pay = pay
+		#method to print full name
+		def fullname(self):
+			return '{} {}'.format(self.first, self.last)
+
+3.1.1. Testing method in class
+	print(emp_1.fullname())
+	- can also be run by referencing the class directly
+	print(Employee.fullname(emp_1))
+
+___________________________________________________________________________
+4.Class variables: shared among all employees
+- add the value as a variable and call it from method: eg. pay raise
+	
+	class Employee:
+		#example of class variable
+		raise_amount = 1.04
+		#constructor
+		def __init__(self, first, last, pay):
+			self.first = first
+			self.last = last
+			self.pay = pay
+			#create attribute out of others. 
+			self.email = first + "." + last + "@company.com"
+		#display full name
+		def fullName(self):
+			return '{} {}'.format(self.first, self.last)
+		def payChange(self):
+			return int(self.pay * Employee.rais_amount)#accessible via self.rais_amount
+
+__________________________________________________________________________
+5. Regular, Class and Static methods
+5.1. Regular: automatically takes the instance as the first argument
+	def name(self, var_i, ..., var_k):
+	
+5.2. Class: automatically takes the class as the first argument. A bit similar to constructors
+	- sets a value that is true for all instances.
+		- now i can change the set the raise amount for all instances. 
+	@classmethod
+	def set_raise_amt(cls, amount):
+		cls.rais_amount = amount
+	
+	- example of a class method as a constructor: create instance from string.
+			- the strings
+				a. emp_str_3 = "John-Doe-200"
+				b. emp_str_4 = "Steven-Smith-10000"
+				c. emp_str_5 = "jane-Doe-5000000"
+	@classmethod
+	def from_string(my_class, emp_str):
+		first, last, pay = emp_str.split("delimeter")
+		return my_class(firs, last, pay)
+		
+	-testing it
+		emp_3 = Employee.from_string(emp_str_3)
+	
+		
+5.3. Static: They don't pass anything automatically. @staticmethod
+		-checking for work days as an example 
+		-use if you don't access the class or instance. 
+	@staticmethod
+	def is_workday(day):
+		if day.weekday ==5 or day.weekday == 6:
+			return false
+		return true
+	-testing it
+		import datetime
+		my_date = datetime.date(2016,7,10)
+		print(Employee.is_workday(my_date))
+
+___________________________________________________________________________
+6. INHERITANCE: SUBCLASSES: sharing attributes among classes. 
+	- manager and developer classes with Employee attributes. 
+	
+	class Developer(Employee):
+		pass
+	class Manager(Employee):
+		pass
+		
+		- testing: create a developer
+		dev1 = Developer("Martin", "Zimula", 50)
+		print(dev1.email)
+
+6.1. Inheritance + own attributes. class dev as example
+
+	class Developer(Employee):
+		#constructor
+		def __init__(self, first, last, pay, skill):
+			#point out inherited attributes (super can be replaced with parent class name). 
+			super().__init__(firs, last, pay)
+			self.skill = skill
+
+___________________________________________________________________________
+7. Decoratos: calling methods like attributes. 
+	- tested on email 
+	@property decorator
+	def email(self):
+		return '{}.{}@email.com'.format(self.first, self.last)
+		
+	

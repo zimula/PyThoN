@@ -1,0 +1,16 @@
+UNIT TESTING TDD
+	- each test is testing a boolean expression
+	- rules: 
+		a. fail test
+		b. code just enough to pass the test
+		c. 
+	
+	- an example of a test
+	
+	import unittest #python library with the test methods. 
+	import my_project #the code to be tested
+	class TestTvMethods(unittest.TestCase):
+		def test_On(self):
+			self.assertEqual(my_project.method(test_value), result)
+			
+		

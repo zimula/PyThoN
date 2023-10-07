@@ -1,0 +1,87 @@
+Python: Classes and objects:
+
+CLASS: blueprint for objects.
+	-example of a simple class
+		Class MyClass:
+			x = 5
+			greeting = "Hello"
+	- creating object from class
+		obj1 = MyClass()
+	-show object 
+		print(obj1.x) #prints 5
+		print(obj1.greeting) # print Hello
+
+THE __init__() Function:
+	- works as a constructor for python. 
+	- an example with a Person class
+		class Person:
+			def __init__(self, name, age):
+				self.name = name
+				self.age = age
+	- creating object from the class
+		person1 = Person("Martin", 36)
+	- display object
+		print(person1.name)
+		print(person1.age)
+
+THE __str__() Function:what to return when object is represented as a string. 
+	- no need for multiple print statements 
+		class Person:
+			def __init__(self, name, age):
+				self.name = name
+				self.age = age
+			def __str__():
+				return f"{self.name}{self.age}"
+		- print object without stating parameters. 
+			person2 = Person("James" 50)
+			print(person2)# returns James age 70
+
+OBJECT METHODS (class methods)
+	- functions that belong to an object. 
+	- a simple example with a sound method. 
+
+	class Cats:
+		def __init__ (self, name, specie, gender):
+			self.name = name
+			self.specie = specie
+			self.gender = gender
+		
+		#the sound method
+		def amimalSound(self):
+			print("The cat says meow!");
+		#testing it
+		cat1 = Cats()
+		cat1.amimalSound()
+THE SELF PARAMETER: refers to the current instance. 
+	- doesn't have to be self (can be anything)
+
+INHERITANCE: class inheriting methods and properties from another class. 
+	- the inheriting class adds the parents name in the parenthesis. 
+	- example with person and studet. 
+
+		class Person:
+			def __init__(self, name, age):
+				self.name = name
+				self.age = age
+		- Here the Student class overrides the __init__ from Person.
+
+		- fixed by adding Person __init__ after studet __init__. 
+		class Student(Person):
+			def __init__(self, name, age):
+				self.name = name
+				self.age = age
+		
+		- fixed by adding Person __init__ after studet __init__.
+		class Student(Person):
+			def __init__(self, name, age):
+				Person.__init__(self, name, age)
+		
+		- instead of writing Person.__init__(self, name, age)
+			- super can be used. 
+		class Student(Person):
+			def __init__(self, name, age):
+				Super().__init__(self, name, age)
+				- in that way the child class inherits all the properties and methods from parent
+				- from here, more properties and methods.  can be added to the student class. 
+
+ITERATORS: objects with countable number of values. 
