@@ -58,4 +58,8 @@ GENERATING TEST REPORTS VIA HTML
 			custom_report_file_name = "custom name.html"
 			runner = HTMLTestRunner(output=custom_report_file_name)
 			unittest.main(testRunner=runner)
-		
+
+
+=========================================================================================
+
+TDD: WRITING TESTS BEFORE THE CODE. 
