@@ -2,7 +2,7 @@
 A program to calculate change
  - this program has 2 data types
     integers: used as input
-    floats: used to assign weights and in the result. 
+    floats: used to assign weights and int the result. 
     round(): can be used to turn floats into integers. 
 
     Plust a simple test of the math library. 
