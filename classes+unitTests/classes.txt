@@ -145,7 +145,7 @@ ___________________________________________________________________________
 			self.skill = skill
 
 ___________________________________________________________________________
-7. Decoratos: calling methods like attributes. 
+7. Decorators: calling methods like attributes. 
 	- tested on email 
 	@property decorator
 	def email(self):

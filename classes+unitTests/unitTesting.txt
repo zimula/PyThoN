@@ -1,0 +1,61 @@
+UNIT TESTING TDD
+	- each test is testing a boolean expression
+	- a way of testing specific parts of the code
+	
+AN EXAMPLE USING STUDENT CLASS: 
+
+	- check if the gpa method works. 
+	class Student():
+		def __init__(self, name, grade, gpa)
+			self.name = name
+			self.grade = grade
+		def getGpa(self):
+			if self.grade = "A":
+				return 4.0
+			else:
+				return 1.0
+
+	- testing the method.
+		a. import unittest: #python library with test class. 
+		
+		b. import code to be tested: student class in this case. 
+		
+		c. setup test. 
+			- the test will require 2 unit tests: 
+			a. if gpa = 4.0
+			b. if gpa = 1.0
+		
+		d. create test class with unittest methods. 
+			
+			class TestStudentGpa(unittest.TestCase):	
+				- the first scenario
+				def test_getGpa_A(self):
+					-instantiate student object
+					student = Student("Tom", "A")
+					- run test
+					self.assertEqual(student.getGpa(),4.0)
+				
+				- the second scenario
+				def test_getGpa_B(self):
+					-instantiate student object
+					student = Student("Jack", "B")
+					- run test
+					self.assertEqual(student.getGpa(),1.0)
+			- make sure test is executed as the main program. 
+			if __name__ == '__main__':
+				unittest.main()
+	- if the method works as intended, the first test will return true and second on too. 
+
+GENERATING TEST REPORTS VIA HTML
+	a. pip install html-testRunner
+	b. from html_testRunner import HTMLTestrunner
+	c. add testRunner to main 
+		if __name__ == '__main__':
+				unittest.main(testRunner=HTMLTestRunner(output='folder in active directly'))
+				- the folder is created if it doesn't exist. 
+	- same thing with custom report name
+		if__name__=='__main__':
+			custom_report_file_name = "custom name.html"
+			runner = HTMLTestRunner(output=custom_report_file_name)
+			unittest.main(testRunner=runner)
+		
