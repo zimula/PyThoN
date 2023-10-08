@@ -63,3 +63,46 @@ GENERATING TEST REPORTS VIA HTML
 =========================================================================================
 
 TDD: WRITING TESTS BEFORE THE CODE. 
+TEST DRIVEN DEVELOPMENT: requirements as tests. 
+	- under this approach, the tests are written first,
+		a. write a failing test
+		b. make the test pass
+		c. clean up the code
+AN EXAMPLE WITH A STOCK ALERT
+- an app to read stock updates from some server
+- process the informaton
+- decision based some criteria
+- an alert when decision is reached
+
+a. The test: example in tdd folder. 
+	- a stock must have a name
+	- for now we will assume the price is none. 
+	- the test will check if price = none. 
+	
+	import unittest
+	class StockTest(unittest.TestCase):
+		- instance of a stock 
+		stock = Stock("GOOG")
+		self.assertIsNone(stock.price)
+		
+	-check if main and generate report. 	
+	if__name__=="__main__":
+		custom_report_file_name = "custom name.html"
+		runner = HTMLTestRunner(output="folder")
+		unittest.main(testRunner=runner)
+	- after the test fails, a class with is create/ corrected in order to pass the test. 
+	class Stock:
+		def __init__(self, symbol):
+			self.symbol = symbol
+			self.price = None
+			- self.price has no relation to any parameter or argument in constructor. 
+- continuously add tests and improve stock class. 
+***************************************nice to know*****************
+try-except-failure
+
+try: 
+	something
+except someError: as a result of try
+	return
+self.fail("exception not triggered by try")
+continue on page 47. 
