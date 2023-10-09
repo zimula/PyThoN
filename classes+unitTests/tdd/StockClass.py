@@ -23,7 +23,10 @@ class Stock1:
     def update(self, timestamp, price):
         if price < 0:
             raise ValueError("price should not be negative")
-        self.price_history.append(price)
+        self.price_history.append((timestamp,price))
+        'add () around parameters if multidimensional'
+
+
     'mimicing existing interface with property decorator'
     @property
     def price(self):
@@ -35,3 +38,12 @@ class Stock1:
         return self.price_history[-3]<\
         self.price_history[-2]<self.price_history[-1]
     
+'Testing'
+TSLA = Stock1("TSLA")
+TSLA.update("2012-2-2",8)
+TSLA.update("2012-2-3",10)
+'data as strings'
+as_String = "\n".join(f"{timestamp}: {price}" for timestamp, price in TSLA.price_history)
+
+print(TSLA.price_history)
+print(as_String)
