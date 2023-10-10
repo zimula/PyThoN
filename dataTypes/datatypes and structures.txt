@@ -1,0 +1,6 @@
+INT:
+STRINGS:
+LISTS:  a collection of turples. 
+ARRAYS:
+TUPLES:
+DICTIONARIES:

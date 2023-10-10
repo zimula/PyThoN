@@ -50,6 +50,7 @@ class stockTest1(unittest.TestCase):
         for timestamp, price in zip(timestamps,prices):
             self.stock.update(timestamp, price)
         self.assertFalse(self.stock.price_increase_trend())
+        
     'some prices equal (flat)'
     def test_increasingTrendFlat(self):
         timestamps = [datetime(2014,2,11),datetime(2014,2,12),datetime(2014,2,13)]
