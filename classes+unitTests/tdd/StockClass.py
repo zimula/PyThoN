@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 class Stock:
     def __init__(self, symbol):
         self.symbol = symbol
@@ -42,8 +42,11 @@ class Stock1:
 TSLA = Stock1("TSLA")
 TSLA.update("2012-2-2",8)
 TSLA.update("2012-2-3",10)
+TSLA.update("2012-2-4", 8)
+TSLA.update("2012-2-5", 5)
 'data as strings'
-as_String = "\n".join(f"{timestamp}: {price}" for timestamp, price in TSLA.price_history)
+as_String = "\n".join(f"{datetime.strptime(timestamp, '%Y-%m-%d').strftime('%d-%b-%Y')}: {price}" for timestamp, price in TSLA.price_history)
 
 print(TSLA.price_history)
+
 print(as_String)
