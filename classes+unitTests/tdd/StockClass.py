@@ -41,11 +41,6 @@ class Stock1:
     'price trend: UNDER CONSTRUCTION'
     def price_increase_trend(self):
         pass
-    
-
-
-
-
 
 
     'daily price change'
@@ -65,7 +60,7 @@ class Stock1:
             price_change_percent = (price_change/yester_price) * 100
             changes.append((_, price_change_percent))
             yester_price = price
-        return changes
+        return changes[-1][-1]
 
 'Instance'
 TSLA = Stock1("TSLA")
@@ -82,4 +77,4 @@ as_String = "\n".join(f"{datetime.strptime(timestamp, '%Y-%m-%d').strftime('%d-%
 print(TSLA.price_history)
 
 print(as_String)
-print(TSLA.daily_price_change())
+print(TSLA.symbol, " changed", TSLA.daily_price_change(), " % today")
