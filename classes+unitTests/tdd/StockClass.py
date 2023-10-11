@@ -33,16 +33,6 @@ class Stock1:
     def price(self):
         return self.price_history[-1] if self.price_history else None
     
-
-
-
-
-    
-    'price trend: UNDER CONSTRUCTION'
-    def price_increase_trend(self):
-        pass
-
-
     'daily price change'
     def daily_price_change(self):
         if len(self.price_history)<2:
@@ -59,8 +49,28 @@ class Stock1:
             price_change = price - yester_price
             price_change_percent = (price_change/yester_price) * 100
             changes.append((_, price_change_percent))
+            change_trend = changes
             yester_price = price
         return changes[-1][-1]
+    
+
+    'price trend: UNDER CONSTRUCTION'
+    def price_increase_trend(self):
+        trend = []
+        old_price = self.price_history[0][1]
+        for _, price in self.price_history[1:]:
+            diff = price - old_price
+            diff_percent = (diff/old_price)*100
+            trend.append((_,diff_percent))
+            avg = sum(i for _, i in trend )/ len(trend)
+        if avg > 0: 
+            return self.symbol + " is in an Upward trend"
+        elif avg < 0:
+            return self.symbol + " is in a Downward trend"
+        else:
+            return self.symbol + " remains Constant"
+        
+
 
 'Instance'
 TSLA = Stock1("TSLA")
@@ -77,4 +87,5 @@ as_String = "\n".join(f"{datetime.strptime(timestamp, '%Y-%m-%d').strftime('%d-%
 print(TSLA.price_history)
 
 print(as_String)
-print(TSLA.symbol, " changed", TSLA.daily_price_change(), " % today")
+print(TSLA.symbol, " changed", TSLA.daily_price_change(), "% today")
+print(TSLA.price_increase_trend())
