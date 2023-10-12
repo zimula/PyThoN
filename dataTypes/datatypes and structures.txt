@@ -1,6 +1,38 @@
-INT:
-STRINGS:
-LISTS:  a collection of turples. 
-ARRAYS:
+_____________________________DATA TYPES_________________________________
+Numeric: int, float, complex
+STRINGS: str
+NoneType: NoneType. Just another way of saying no value. 
+_____________________________DATA STRUCTURES____________________________
+LISTS: 
+	aList = [1, "Tom", "Denmark", (2, 3)]
+	- can store multiple items
+	- The are ordered, changeable and allow duplicates
+	- are indexed: to get Tom from list, use aList[1]
+				   to get 3 from list, use aList[3][1]
+	- iterable:
+		a. for loop: for i in aList:
+						print(i)
+					
+ARRAYS: for basic python lists are used. 
+
 TUPLES:
-DICTIONARIES:
+	aTuble = (1, "John", True, 100)
+	- store multiple items 
+	- ordered and unchangeable
+	- indexed: to get john, use aTuble[1]
+	- iterable: 
+		a for loop: for i in aTuble:
+						print(i)
+	
+DICTIONARIES: can be thought of as objects with data type DICT. 
+	aDictionary = {
+					"Symbol":"GOOG"
+					"Date": "2020-12-03"
+					"Sector":"IT"
+				}
+	- store data in KEY:VALUE pairs
+	- ordered, changeable and no duplicates
+	- iterable: 
+		a for loop: for x in aDictionary: 
+						print(x)
+			- can applied to either keys, values or both. 

@@ -16,6 +16,7 @@ class DataRetriever:
     'instantiate stock from data retrieved'
     def instantiate_stock_from_data(self):
         data = self.retrieve_data()
+        'dictioanary used to hold stock data'
         stocks = {}
         if isinstance(data, pd.DataFrame):
             for index, row in data.iterrows():

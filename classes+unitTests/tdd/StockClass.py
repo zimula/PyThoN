@@ -86,6 +86,7 @@ as_String = "\n".join(f"{datetime.strptime(timestamp, '%Y-%m-%d').strftime('%d-%
 
 print(TSLA.price_history)
 
+
 print(as_String)
 print(TSLA.symbol, " changed", TSLA.daily_price_change(), "% today")
 print(TSLA.price_increase_trend())
