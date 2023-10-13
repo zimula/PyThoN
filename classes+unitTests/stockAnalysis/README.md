@@ -13,7 +13,7 @@
     </ul>
 5. Data structures used: a container for any kind of data.
 ===================================
-    <ul>
+    <ul style = "list-style: none">
     LISTS
     <li><img src ="lists.PNG"></img></li>
     DICTIONARIES
@@ -22,5 +22,5 @@
     <h3>must revise retrieval class</h3>
 6. Loops:
 7. Conditional statements:
-8. Diagram goes here
+8. UML diagrams go here
 <img src ="horoscope.PNG"></img>
