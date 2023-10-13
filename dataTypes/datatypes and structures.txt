@@ -24,7 +24,7 @@ TUPLES:
 		a for loop: for i in aTuble:
 						print(i)
 	
-DICTIONARIES: can be thought of as objects with data type DICT. 
+DICTIONARIES: used to hold stock objects. 
 	aDictionary = {
 					"Symbol":"GOOG"
 					"Date": "2020-12-03"
@@ -35,4 +35,4 @@ DICTIONARIES: can be thought of as objects with data type DICT.
 	- iterable: 
 		a for loop: for x in aDictionary: 
 						print(x)
-			- can applied to either keys, values or both. 
+		- can applied to either keys, values or both. 

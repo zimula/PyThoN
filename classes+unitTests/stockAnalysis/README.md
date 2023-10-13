@@ -14,10 +14,9 @@
 5. Data structures used:
     <ul>
     <li><img src ="lists.PNG">Lists</img></li>
-    <li>dictionary: to hold stock object</li>
+    <li><img src ="dictionaries.PNG"></img></li>
     </ul> 
     <h3>must revise retrieval class</h3>
 6. Loops:
 7. Conditional statements:
 <img src ="horoscope.PNG">diagram</img>
-<img src ="lists.PNG">Lists</img>
