@@ -13,7 +13,8 @@
     </ul>
 5. Data structures used:
     <ul>
-    <li>list: to hold price history. Work surprisingly well as arrays</li>
+    <li>list: to hold price history. Work surprisingly well as arrays 
+    <img src ="lists.png"></img></li>
     <li>dictionary: to hold stock object</li>
     </ul> 
     <h3>must revise retrieval class</h3>
