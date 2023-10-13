@@ -1,9 +1,15 @@
 <h1>A simple stock analysis app with 3 modules that illustrate "SEPARATON OF CONCERNS"<h1>
 
 <style>
+    body{
+        background: #111;
+        color: #fff;
+        font-style: "san-serif";
+    }
     ul{
         list-style: none;
     }
+
 </style>
 
 1. A stock module to encapsulate methods and attributes of stock instances.
@@ -25,9 +31,9 @@
     </ul> 
     <h3>must revise retrieval class</h3>
 
-6. Loops: control flow statements
-<img src = ""></img>
+6. Loops: control flow statements. A simple for loop below.
+<img src = "4loop.PNG"></img>
 7. Conditional statements: criteria based decisions
-<img src = ""></img>
+<img src = "conditional.PNG"></img>
 8. UML diagrams go here: a simplified view of an application
 <img src ="horoscope.PNG"></img>
