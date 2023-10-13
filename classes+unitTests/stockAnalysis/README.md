@@ -13,7 +13,7 @@
     </ul>
 5. Data structures used: a container for any kind of data.
 ===================================
-    <ul style = "list-style: none">
+    <ul style = "list-style: none; color: blue;">
     LISTS
     <li><img src ="lists.PNG"></img></li>
     DICTIONARIES
