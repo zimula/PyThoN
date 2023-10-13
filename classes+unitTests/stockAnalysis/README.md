@@ -13,12 +13,11 @@
     </ul>
 5. Data structures used:
     <ul>
-    <li><img src ="lists.png">Lists</img> </li>
+    <li>list: to hold price history. Work surprisingly well as arrays</li>
     <li>dictionary: to hold stock object</li>
     </ul> 
     <h3>must revise retrieval class</h3>
 6. Loops:
 7. Conditional statements:
 <img src ="horoscope.PNG">diagram coming soom</img>
-list: to hold price history. Work surprisingly well as arrays
 <img src ="lists.png">Lists</img>
