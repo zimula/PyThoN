@@ -21,3 +21,4 @@
 7. Conditional statements:
 <img src ="horoscope.PNG">diagram coming soom</img>
 list: to hold price history. Work surprisingly well as arrays
+<img src ="lists.png">Lists</img>
