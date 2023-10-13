@@ -19,5 +19,5 @@
     <h3>must revise retrieval class</h3>
 6. Loops:
 7. Conditional statements:
-<img src ="horoscope.PNG">diagram coming soom</img>
-<img src ="lists.png">Lists</img>
+<img src ="horoscope.PNG">diagram</img>
+<img src ="lists.PNG">Lists</img>
