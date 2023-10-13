@@ -1,18 +1,8 @@
-<h1>A simple stock analysis app with 3 modules that illustrate "SEPARATON OF CONCERNS"<h1>
+<h1 style = "color:orangered">A simple stock analysis app with 3 modules that illustrate "SEPARATON OF CONCERNS"<h1>
 
-<style>
-    body{
-        background: #111;
-        color: #fff;
-        font-style: "san-serif";
-    }
-    ul{
-        list-style: none;
-    }
+<div style = "background:linear-gradient(0deg, red, yellow); color:black">
 
-</style>
-
-1. <h3>A stock module to encapsulate methods and attributes of stock instances.</h3>
+1. <p>A stock module to encapsulate methods and attributes of stock instances.</p>
 2. <p>A data retriver module for  data import methods.</p> 
 3. <p>Main module to help us use the classes.</p> 
 4. <p>Data types used:</p> 
@@ -22,7 +12,7 @@
     <li>string: symbol is a string</li>
     </ul>
 5. Data structures used: a container for any kind of data.
-===================================
+    ===================================
     <ul id = "list2">
     LISTS
     <li><img src ="lists.PNG"></img></li>
@@ -37,3 +27,4 @@
 8. UML diagrams go here: a simplified view of an application
     <img src ="horoscope.PNG"></img>
 9. The classes in detail
+</div>
