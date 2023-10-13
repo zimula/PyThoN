@@ -31,7 +31,7 @@ __________________________________________________________________________
 			self.first = first
 			self.last = last
 		#use name to generate email 
-			self.email = firs + "."+ last + "@email.com"
+			self.email = first + "."+ last + "@email.com"
 			self.pay = pay
 
 
@@ -52,7 +52,7 @@ ___________________________________________________________________________
 		def __init__(self, first, last, pay)
 			self.first = first
 			self.last = last 
-			self.email = firs + "."+ last + "@email.com"
+			self.email = first + "."+ last + "@email.com"
 			self.pay = pay
 		#method to print full name
 		def fullname(self):
@@ -145,8 +145,8 @@ ___________________________________________________________________________
 			self.skill = skill
 
 ___________________________________________________________________________
-7. Decorators: calling methods like attributes. 
-	- tested on email 
+7. Decorators: wrapping and extending behaviour of wrapped functions.  
+	- tested on email: changes the format of the concatenation using f'strings.   
 	@property decorator
 	def email(self):
 		return '{}.{}@email.com'.format(self.first, self.last)
