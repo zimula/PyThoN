@@ -19,12 +19,15 @@ class DataRetriever:
         'dictioanary used to hold stock data'
         stocks = {}
         if isinstance(data, pd.DataFrame):
+            'check if data is a 2d data structure'
             for index, row in data.iterrows():
-                symbol = row['Symbol']
+                'set column headings'
+                symbol = row['Symbol'] 
                 date = row['Date']
                 price = row['Price']
 
                 if symbol not in stocks:
+                    'if stock no in dictionary, instantiate'
                     stock = Stock(symbol)
                     stocks[symbol] = stocks
                 else:

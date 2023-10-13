@@ -17,4 +17,6 @@
     <li>dictionary: to hold stock object</li>
     </ul> 
     <h3>must revise retrieval class</h3>
+6. Loops:
+7. Conditional statements:
 <img src ="horoscope.PNG">diagram coming soom</img>
