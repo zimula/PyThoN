@@ -11,12 +11,16 @@
     <li>float: prices can have decimals</li>
     <li>string: symbol is a string</li>
     </ul>
-5. Data structures used:
+5. Data structures used: a container for any kind of data.
+===================================
     <ul>
-    <li><img src ="lists.PNG">Lists</img></li>
+    LISTS
+    <li><img src ="lists.PNG"></img></li>
+    DICTIONARIES
     <li><img src ="dictionaries.PNG"></img></li>
     </ul> 
     <h3>must revise retrieval class</h3>
 6. Loops:
 7. Conditional statements:
-<img src ="horoscope.PNG">diagram</img>
+8. Diagram goes here
+<img src ="horoscope.PNG"></img>
