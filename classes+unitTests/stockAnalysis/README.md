@@ -1,4 +1,4 @@
-<h1>A simple stock analysis app with 3 modules that illustrates "SEPARATON OF CONCERNS"<h1>
+<h1>A simple stock analysis app with 3 modules that illustrate "SEPARATON OF CONCERNS"<h1>
 
 
 
@@ -17,3 +17,4 @@
     <li>dictionary: to hold stock object</li>
     </ul> 
     <h3>must revise retrieval class</h3>
+<img src ="horoscope.PNG">diagram coming soom</img>
