@@ -11,7 +11,7 @@
     <li>float: prices can have decimals</li>
     <li>string: symbol is a string</li>
     </ul>
-5. Data structures used: a container for any kind of data.
+5. <p>Data structures used: a container for any kind of data.</p>
     ===================================
     <ul id = "list2">
     LISTS
@@ -20,11 +20,11 @@
     <li><img src ="dictionaries.PNG"></img></li>
     </ul> 
 
-6. Loops: control flow statements. A simple for loop below.
+6. <p>Loops: control flow statements. A simple for loop below.</p>
     <img src = "4loop.PNG"></img>
-7. Conditional statements: criteria based decisions
+7. <p>Conditional statements: criteria based decisions</p>
     <img src = "conditional.PNG"></img>
-8. UML diagrams go here: a simplified view of an application
+8. <p>UML diagrams go here: a simplified overview of an application</p>
     <img src ="horoscope.PNG"></img>
-9. The classes in detail
+9. <p>The classes in detail</p>
 </div>
