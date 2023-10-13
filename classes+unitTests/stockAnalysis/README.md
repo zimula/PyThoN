@@ -13,7 +13,7 @@
     </ul>
 5. Data structures used:
     <ul>
-    <li><img src ="lists.png"> </li>
+    <li><img src ="lists.png">Lists</img> </li>
     <li>dictionary: to hold stock object</li>
     </ul> 
     <h3>must revise retrieval class</h3>
