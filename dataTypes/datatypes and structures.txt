@@ -3,7 +3,7 @@ Numeric: int, float, complex
 STRINGS: str
 NoneType: NoneType. Just another way of saying no value. 
 _____________________________DATA STRUCTURES____________________________
-LISTS: 
+LISTS: to hold price history. Work likes arrays. 
 	aList = [1, "Tom", "Denmark", (2, 3)]
 	- can store multiple items
 	- The are ordered, changeable and allow duplicates
