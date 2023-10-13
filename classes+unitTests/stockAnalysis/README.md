@@ -15,16 +15,16 @@
     ===================================
     <ul id = "list2">
     LISTS
-    <li><img src ="lists.PNG"></img></li>
+    <li><img src ="img/lists.PNG"></img></li>
     DICTIONARIES
-    <li><img src ="dictionaries.PNG"></img></li>
+    <li><img src ="img/dictionaries.PNG"></img></li>
     </ul> 
 
 6. <p>Loops: control flow statements. A simple for loop below.</p>
-    <img src = "4loop.PNG"></img>
+    <img src = "img/4loop.PNG"></img>
 7. <p>Conditional statements: criteria based decisions</p>
-    <img src = "conditional.PNG"></img>
+    <img src = "img/conditional.PNG"></img>
 8. <p>UML diagrams go here: a simplified overview of an application</p>
-    <img src ="horoscope.PNG"></img>
+    <img src ="img/horoscope.PNG"></img>
 9. <p>The classes in detail</p>
 </div>
