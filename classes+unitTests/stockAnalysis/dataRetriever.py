@@ -33,7 +33,7 @@ class DataRetriever:
                 else:
                     stock = stocks[symbol]
 
-                stock.update(data, price)
+                stock.update(date, price)
             return list(stocks.values())
         else: 
             return None

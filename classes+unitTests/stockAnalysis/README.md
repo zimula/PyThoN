@@ -1,3 +1,10 @@
+<css>
+    div{
+        background
+    }
+</css>
+
+
 <h1 style = "color:orangered">A simple stock analysis app with 3 modules that illustrate "SEPARATON OF CONCERNS"<h1>
 
 <div style = "background:linear-gradient(0deg, red, yellow); color:black">

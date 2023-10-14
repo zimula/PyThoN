@@ -1,0 +1,45 @@
+<svg fill="none" viewBox="0 0 600 800" width="600" height="800" xmlns ="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="100%">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <style>
+                .container{
+                    width:100%;
+                    background-color: black;
+                    color:white;
+                }
+                #horo{
+                    content: url("img/horoscope.PNG")
+                }
+            </style>
+            <div class = "container">
+
+ <p>1. A stock module to encapsulate methods and attributes of stock instances.</p>
+ <p>2. A data retriver module for  data import methods.</p> 
+ <p>3. Main module to help us use the classes.</p> 
+ <p>4. Data types used:</p> 
+    <ul id = "list1">
+    <li>int: prices can be integers</li>
+    <li>float: prices can have decimals</li>
+    <li>string: symbol is a string</li>
+    </ul>
+ <p>5. Data structures used: a container for any kind of data.</p>
+    ===================================
+    <ul id = "list2">
+    LISTS
+    <li><img id = "lists" src ="img/lists.PNG"></img></li>
+    DICTIONARIES
+    <li><img src ="img/dictionaries.PNG"></img></li>
+    </ul> 
+
+ <p>6. Loops: control flow statements. A simple for loop below.</p>
+    <img src = "img/4loop.PNG"></img>
+ <p>7. Conditional statements: criteria based decisions</p>
+    <img src = "img/conditional.PNG"></img>
+ <p>8. UML diagrams go here: a simplified overview of an application</p>
+    <img id = "horo"></img>
+ <p>9. The classes in detail</p>
+</div>
+            
+        </div>
+    </foreignObject> 
+</svg>
