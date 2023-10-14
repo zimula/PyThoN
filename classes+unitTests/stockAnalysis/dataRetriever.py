@@ -1,8 +1,9 @@
 import pandas as pd
 from stock import Stock
+from datetime import datetime
 
 class DataRetriever:
-    def __init__(self, excel_file) -> None:
+    def __init__(self, excel_file):
         self.excel_file = excel_file
     
     'retrieving method'
@@ -27,13 +28,13 @@ class DataRetriever:
                 price = row['Price']
 
                 if symbol not in stocks:
-                    'if stock no in dictionary, instantiate'
-                    stock = Stock(symbol)
-                    stocks[symbol] = stocks
-                else:
-                    stock = stocks[symbol]
+                    'if stock not in dictionary, instantiate'
+                    stocks[symbol] = Stock(symbol)
+                    
+                'else use match'
+                stock = stocks[symbol]
 
-                stock.update(date, price)
+                stock.update(datetime.date(date), price)
             return list(stocks.values())
         else: 
             return None

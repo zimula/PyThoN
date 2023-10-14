@@ -14,7 +14,7 @@ class Stock:
     'mimicing existing interface with property decorator'
     @property
     def price(self):
-        return self.price_history[-1] if self.price_history else None
+        return self.price_history[0:] if self.price_history else None
     
     'daily price change'
     def daily_price_change(self):
@@ -34,7 +34,7 @@ class Stock:
             changes.append((_, price_change_percent))
             change_trend = changes
             yester_price = price
-        return changes[-1][-1]
+        return round(changes[-1][-1],2)
     
 
     'price trend: UNDER CONSTRUCTION'
@@ -46,6 +46,7 @@ class Stock:
             diff_percent = (diff/old_price)*100
             trend.append((_,diff_percent))
             avg = sum(i for _, i in trend )/ len(trend)
+        
         if avg > 0: 
             return self.symbol + " is in an Upward trend"
         elif avg < 0:
