@@ -1,0 +1,54 @@
+PANDAS: python library for working data sets
+	- loading
+	- analysing
+	- cleaning
+	- exploring
+	- manipulating
+	
+DATAFRAME: data must be loaded into datafrmaes before manipulating or a whole table.
+	import pandas as pd
+	data = {
+				'calories': [420, 380, 390],
+				'duration': [50, 40, 45]
+		   }
+		   var_i = pd.DataFrame(data)
+		   print(var_i)
+	- locate specific: var_i.loc[0]
+	- load files into dataframe
+		df = pd.read_csv('excel.csv")
+	- max_rows: return total number of rows. 
+		pd.options.display.max_rows. max_rows can be changed.
+	- json: can be treated as dictionaries. 
+	- limit output: df.head(n)
+		   
+INSTALLING & USE: 
+	- add pandas to module: pip intall pandas
+	- use pandas in module: "import pandas" or "import pandas as pd"
+	- example: load dictionary into data frame and display it
+	
+		import pandas
+		dataset =v{
+					'cars':['bmw','volvo','ford'],
+					'age':[2,5,9]
+				  }
+		var_i = pandas.DataFrame(dataset)
+		print(var_i)
+
+SERIES: a array that keeps track of the items in the dataframes
+	- example: 
+		a = [1,7,2]
+		var_i = pd.series(a)
+		print(var_i)
+		
+LABELS:a way to change the index label 
+		var_i = pd.Series(a, index = ['x','y','z'])
+			print(var_i)
+	- key/value objects as series
+		cats = {'Tom': 7,'Jerry': 4,'Monty': 12}
+		var_i = pd.Series(cats)
+DATA CLEANING:
+
+	
+	
+	
+

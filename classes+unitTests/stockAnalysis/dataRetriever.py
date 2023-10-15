@@ -9,6 +9,7 @@ class DataRetriever:
     'retrieving method'
     def retrieve_data(self):
         try:
+            'load data into data frame'
             data = pd.read_excel(self.excel_file)
             return data
         except Exception as e:
@@ -38,3 +39,4 @@ class DataRetriever:
             return list(stocks.values())
         else: 
             return None
+        

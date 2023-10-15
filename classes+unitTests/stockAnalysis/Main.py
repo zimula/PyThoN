@@ -3,11 +3,11 @@ from dataRetriever import DataRetriever
 
 
 
-'enter file to open'
-data_retriever = DataRetriever(r"C:\\Users\\zimul\\Documents\\python\\classes+unitTests\\stockAnalysis\\Book2.xlsx")
+'Instantiate data object'
+data_retriever = DataRetriever(r"stockAnalysis\\Book2.xlsx")
 
 
-'instantiate using data'
+'instantiate stock using data'
 stocks = data_retriever.instantiate_stock_from_data()
 
 'if succeful, apply object methods'
@@ -20,6 +20,8 @@ if stocks:
         print("=====================================================")
 else:
     print("error")
+
+
 
 
 'to make sure that main run when this modules is executed as main method'
