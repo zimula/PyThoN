@@ -35,7 +35,7 @@ class DataRetriever:
                 'else use match'
                 stock = stocks[symbol]
 
-                stock.update(datetime.date(date), price)
+                stock.update(date, price)
             return list(stocks.values())
         else: 
             return None

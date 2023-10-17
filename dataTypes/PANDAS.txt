@@ -46,6 +46,7 @@ LABELS:a way to change the index label
 	- key/value objects as series
 		cats = {'Tom': 7,'Jerry': 4,'Monty': 12}
 		var_i = pd.Series(cats)
+		
 DATA CLEANING:
 
 	
