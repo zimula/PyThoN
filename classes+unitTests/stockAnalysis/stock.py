@@ -16,7 +16,7 @@ class Stock:
     def price(self):
         return self.price_history[0:] if self.price_history else None
     
-    'daily price change'
+    'daily price change %'
     def daily_price_change(self):
         if len(self.price_history)<2:
             return "Not enough data for analysis"
@@ -46,6 +46,7 @@ class Stock:
             diff_percent = (diff/old_price)*100
             trend.append((_,diff_percent))
             avg = sum(i for _, i in trend )/ len(trend)
+            old_price = price
         
         if avg > 0: 
             return self.symbol + " is in an Upward trend"

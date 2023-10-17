@@ -15,7 +15,7 @@ if stocks:
     print("stock copied")
     for stock in stocks:
         print(f"Symbol: {stock.symbol} {stock.price}")
-        print(stock.daily_price_change())
+        print('24Hr:', stock.daily_price_change())
         print(stock.price_increase_trend())
         print("=====================================================")
 else:
