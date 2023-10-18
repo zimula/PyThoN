@@ -1,3 +1,4 @@
+
 class Stock:
     def __init__(self, symbol):
         self.symbol = symbol
@@ -10,12 +11,10 @@ class Stock:
         self.price_history.append((timestamp,price))
         'add () around parameters if pairs etc'
 
-
-    'mimicing existing interface with property decorator'
-    @property
-    def price(self):
-        return self.price_history[0:] if self.price_history else None
+    def get_price_history(self):
+        return self.price_history[-1][1] 
     
+
     'daily price change %'
     def daily_price_change(self):
         if len(self.price_history)<2:
@@ -37,7 +36,7 @@ class Stock:
         return round(changes[-1][-1],2)
     
 
-    'price trend: UNDER CONSTRUCTION'
+    'trend using mean of relative change'
     def price_increase_trend(self):
         trend = []
         old_price = self.price_history[0][1]
@@ -54,3 +53,8 @@ class Stock:
             return self.symbol + " is in a Downward trend"
         else:
             return self.symbol + " remains Constant"
+        
+    'risk'
+    def risk_level(self):
+        'simple standard deviation will be used. And volatility level will be set'
+        pass

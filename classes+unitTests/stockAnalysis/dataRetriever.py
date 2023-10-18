@@ -1,6 +1,5 @@
 import pandas as pd
 from stock import Stock
-from datetime import datetime
 
 class DataRetriever:
     def __init__(self, excel_file):
