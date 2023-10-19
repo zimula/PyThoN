@@ -1,10 +1,20 @@
 import numpy as np
 
 class Stock:
+    num_stocks = 0
+    analyst = "Jack"
+    def assign_analyst():
+        analyst = input("Enter user name please")
     def __init__(self, symbol):
         self.symbol = symbol
         self.price_history = []
         'list made up of tuples'
+        Stock.num_stocks = Stock.num_stocks +1
+        'instance tracking'
+        
+    
+    def stock_tracking(self):
+        return Stock.num_stocks
 
     def update(self, timestamp, price):
         if price < 0:

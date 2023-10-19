@@ -5,7 +5,7 @@ from dataRetriever import DataRetriever
 
 
 'Instantiate data object'
-data_retriever = DataRetriever(r"stockAnalysis\\Book2.xlsx")
+data_retriever = DataRetriever(r"stockAnalysis\\Book1.xlsx")
 
 
 'instantiate stock using data'
@@ -25,6 +25,9 @@ if stocks:
 else:
     print("error")
 
+print(f'Currently tracking {stock.stock_tracking()} stocks.')
+print(f'Analysis performed by {stock.analyst}')
+print("=====================================================")
 
 
 
