@@ -1,3 +1,4 @@
+import numpy as np
 
 class Stock:
     def __init__(self, symbol):
@@ -54,7 +55,22 @@ class Stock:
         else:
             return self.symbol + " remains Constant"
         
-    'risk'
+    'risk using std'
     def risk_level(self):
-        'simple standard deviation will be used. And volatility level will be set'
-        pass
+        prices = [price for _,price in self.price_history]
+        'calculate daily returns'
+        '(today-yesterday)/yesterday = a day"s return.'
+        returns = np.diff(prices)/ prices[:-1]
+        'std as risk'
+        risk = np.std(returns)
+
+        low_risk = 0.05
+        high_risk = 0.15
+
+        if risk < low_risk:
+            return ':-) low volatility past'
+        elif risk < high_risk:
+            return ':-| moderate volatility past'
+        else:
+            return ':-( very volatile past'
+

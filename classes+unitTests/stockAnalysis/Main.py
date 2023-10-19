@@ -20,7 +20,7 @@ if stocks:
         print("Price:", stock.get_price_history(), "dkk")
         print('24Hr:', stock.daily_price_change(), "%")
         print(stock.price_increase_trend())
-        print("Volatility: N/A")
+        print(stock.risk_level())
         print("=====================================================")
 else:
     print("error")
