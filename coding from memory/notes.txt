@@ -1,0 +1,12 @@
+Testing python memory. 
+
+1. Simple classes and instances
+    a. create to 2 classes (human, vehicle)
+    b. add variables and methods. 
+2. Class and object collaboration
+    a. test if object from vehicle class can be used in human class. 
+3. Inheritance
+    a. a singer class then inherits form the human class. 
+        - by using super(): parent class attributes and methods can be accessed. 
+4. Polymorphism
+    - sub class singer differentiating itself from the basic human. 

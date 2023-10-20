@@ -2,9 +2,10 @@ import numpy as np
 
 class Stock:
     num_stocks = 0
-    analyst = "Jack"
-    def assign_analyst():
-        analyst = input("Enter user name please")
+    analyst = " the Bureau"
+    'use inheritance to override'
+
+    
     def __init__(self, symbol):
         self.symbol = symbol
         self.price_history = []
@@ -83,4 +84,12 @@ class Stock:
             return ':-| moderate volatility past'
         else:
             return ':-( very volatile past'
+
+class Analyst(Stock):
+    def __init__(self, analyst):
+        super().__init__(analyst)
+        self.analyst = analyst
+    
+
+
 
