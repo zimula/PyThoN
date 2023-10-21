@@ -4,6 +4,7 @@ class singer(Human):
         super().__init__("Singer",name, gender, age)
         self.genre = genre
         self.songs = []
+        
     def greeting(self):
         return f'Hej, jeg hedder {self.name}. Og arbejder som {self.type}'
 
