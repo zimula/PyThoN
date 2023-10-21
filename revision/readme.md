@@ -14,12 +14,13 @@ Testing python memory.
 5. Lists: 
     a. register vehicle instances in vehicle class (car_made =[])
     b. register vehicle instances sold (cars_sold = []) in vehicle class and on human instance who bought them (cars_owned = []). 
-    c. register vehicle instances available for sale (car_inStock = [])
-        - still working on logic. 
-        *****************************************
-        *****************************************
+    c. register vehicle instances available for sale (cars_inStock = [])
+        - if a car exists in cars_sold, it's removed from cars_inStock
     d. register songs by singer instances (songs =[])
 6. Class variables
     - the lists mentioned above + int for id
 7. Int
-    - using to provide a unique id to each vehicle instance and track the number of instances. 
+    - used to provide a unique id to each vehicle instance and track the number of instances. 
+8. Unit testing
+     a. ran a simple test on each method in the human class.
+        - assertEqual was used  
