@@ -13,16 +13,15 @@ while True:
     y = float(input('"enter y value: '))
     operation = (input("enter operation: "))
     if operation == "+":
-        print(add(x,y))
-        break
+        result = add(x,y)
     elif operation == "-":
-        print(sub(x,y))
-        break
+        result = sub(x,y)
     elif operation == "*":
-        print(mult(x,y))
-        break
+        result = mult(x,y)
     elif operation == "/":
-        print(div(x,y))
-        break
+        result = div(x,y)
+    print(result)
+    break
+
 
         
