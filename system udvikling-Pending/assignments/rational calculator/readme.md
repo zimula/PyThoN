@@ -12,3 +12,4 @@
 
     *************done**********************************
 3. modify second version to take and return fractions
+4. might add **GUI**
