@@ -31,6 +31,7 @@ Testing python memory.
     - simple list display, with append and pop() visualized. 
     - must add input window to remove specific item from list.
     - code will be modified to deal with human vs vehicle experiment
+    - use try and except to surpress the graphics error when closing window. 
     <img src='warehouse.PNG'></img> 
     
 

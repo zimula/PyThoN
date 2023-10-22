@@ -16,7 +16,8 @@ def remove_items():
         if item == i:
             items.remove(item) """
     'for now LIFO will do'
-    items.pop(0)
+    if len(items) > 0:
+        items.pop(0)
 
 'button methods'
 def button1_click():
@@ -26,7 +27,7 @@ def button2_click():
     remove_items()
     redraw_blocks()
 def end_it():
-    win.close()
+    pass
 
 def redraw_blocks():
     for i in win.items[:]:
@@ -102,11 +103,15 @@ btn3_lable.draw(win)
 
 'my event listener'
 while True:
-    click_point = win.getMouse()
-    if 450 <= click_point.getX() <= 500 and 100 <= click_point.getY() <= 130:
-        button1_click()
-    elif 450 <= click_point.getX() <= 500 and 150 <= click_point.getY() <= 180:
-        button2_click()
-    elif 450 <= click_point.getX() <= 500 and 50 <= click_point.getY() <= 80:
-        end_it()
+    try:
+        click_point = win.getMouse()
+        if 450 <= click_point.getX() <= 500 and 100 <= click_point.getY() <= 130:
+            button1_click()
+        elif 450 <= click_point.getX() <= 500 and 150 <= click_point.getY() <= 180:
+            button2_click()
+        elif 450 <= click_point.getX() <= 500 and 50 <= click_point.getY() <= 80:
+            win.close()
+    except GraphicsError:
+        break
+
     
