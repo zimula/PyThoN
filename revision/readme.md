@@ -27,9 +27,10 @@ Testing python memory.
 9. Graphics: 
     - gui for HUMAN VS. CAR COMING SOON
     - for now, there's a test in testVisual.py. 
-    - Had to brush up on some thing. 
+    - Had to brush up on some things. 
     - simple list display, with append and pop() visualized. 
     - must add input window to remove specific item from list.
+    - code will be modified to deal with human vs vehicle experiment
     <img src='warehouse.PNG'></img> 
     
 
