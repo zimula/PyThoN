@@ -23,4 +23,14 @@ Testing python memory.
     - used to provide a unique id to each vehicle instance and track the number of instances. 
 8. Unit testing
      a. ran a simple test on each method in the human class.
-        - assertEqual was used  
+        - assertEqual was used
+9. Graphics: 
+    - gui for HUMAN VS. CAR COMING SOON
+    - for now, there's a test in testVisual.py. 
+    - Had to brush up on some thing. 
+    - simple list display, with append and pop() visualized. 
+    - must add input window to remove specific item from list.
+    <img src='warehouse.PNG'></img> 
+    
+
+[def]: arehours
