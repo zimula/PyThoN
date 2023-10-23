@@ -58,11 +58,13 @@ def main():
     entry1 = Entry(Point(250, 50), 20)
     text2 = Text(Point(100,100), "Second no.")
     entry2 = Entry(Point(250, 100), 20)
+    
 
     text1.draw(win)
     text2.draw(win)
-    entry1.draw(win)
+    'order of drawing sets focus on the last drawn'
     entry2.draw(win)
+    entry1.draw(win)
 
     'choosing operation'
     opText = Text(Point(120, 150), "Select Operation")
