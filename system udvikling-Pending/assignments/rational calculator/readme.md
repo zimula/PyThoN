@@ -3,6 +3,7 @@
 **done***********************
 
 2. create the **same** calculator using **command pattern**
+    **CODE CAN WORK WITHOUT INTERFACE DUE TO PYTHON'S FLEXIBILITY (PATTERN IS OVERKILL IN THIS CONTEXT)**
     - a base class as the interface with an execute method with no body.
     - concrete classes (add, subtract, multiply and divide) implement the interface. Consider interface methods as place holders.
     - an invoker: a class with commands as intance attributes
