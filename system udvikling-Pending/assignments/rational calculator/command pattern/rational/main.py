@@ -2,6 +2,7 @@ from graphics import *
 from Invoker import Calculator
 from concrete_commands import *
 from fractions import Fraction
+
 'Main (should probably put everything in its own module) '
 def main():
     'gui'
@@ -49,7 +50,7 @@ def main():
         opButtons.append((button, buttonText))
 
     'output'
-    resultText = Text(Point(400,200),"ghgh")
+    resultText = Text(Point(400,200),"ReSuLt")
     resultText.setSize(25)
     resultText.setStyle('bold')
     resultText.draw(win)
