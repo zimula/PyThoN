@@ -6,7 +6,8 @@
     **CODE CAN WORK WITHOUT INTERFACE DUE TO PYTHON'S FLEXIBILITY (PATTERN IS OVERKILL IN THIS CONTEXT)**
     - a base class as the interface with an execute method with no body.
     - concrete classes (add, subtract, multiply and divide) implement the interface. Consider interface methods as place holders.
-    - an invoker: a class with commands as intance attributes
+    - an invoker: a class that sets commands and executes them.
+    - a receiver: the class that carries out the actual work. Here the calculator class is both the invoker and the receiver. 
     - a method to set command
     - a method to use command methods. 
     - commands refer to concrete classes.
@@ -15,6 +16,8 @@
 
 3. modify second version to take and return fractions
     - requires fractions library
+
+**************done**************************
 
 4. might add **GUI**
     - started
