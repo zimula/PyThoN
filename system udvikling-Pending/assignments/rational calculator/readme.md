@@ -23,5 +23,8 @@
     ************************done******************************** 
 
 5. Rebuild in **html and js**
+    - basic calculator in html done. 
+    - add fraction functonality. 
+    - see if I can apply a design pattern in js
     - use selenium to run tests on site.
     - see it works with a local page.  

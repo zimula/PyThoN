@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="cal.js" defer></script>
+    <style>
+        *{
+            background: #999;
+        }
+        div{
+            height: 200px;
+            width: 25%;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(blue, yellow);
+        }
+
+
+        input, select, button {
+            margin: 5px;
+            padding: 5px;
+            color: black;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px;   
+
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="Enter fraction1" id="fraction1">
+        <input type="text" placeholder="Enter fraction2" id="fraction2">
+        <select id="operation" name="operation" title="operation">
+            <option value="select">Select operation</option>
+            <option value="Add">Add</option>
+            <option value="Subtract">Subtract</option>
+            <option value="Multiply">Multiply</option>
+            <option value="Divide">Divide</option>
+        </select>
+        <button id="btn">=</button>
+        <p id="result">Result</p>
+    </div>
+    
+    
+</body>
+</html>
