@@ -4,8 +4,8 @@
 
 1. <p>A stock module to encapsulate methods and attributes of stock instances.</p>
 2. <p>A data retriver module for  data import methods.</p> 
+3. <p>A customers module to use the stock class</p>
 3. <p>Main module to help us use the classes.</p> 
-4. <p>*****************************************************A customer class for utilizing stocks</p>
 5. <p>Data types used:</p> 
     <ul id = "list1">
     <li>int: prices can be integers</li>
