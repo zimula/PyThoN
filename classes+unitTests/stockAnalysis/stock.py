@@ -2,20 +2,18 @@ import numpy as np
 
 class Stock:
     num_stocks = 0
-    analyst = " the Bureau"
+    analyst = "the Bureau"
     'use inheritance to override'
 
     
     def __init__(self, symbol):
         self.symbol = symbol
         self.price_history = []
-        'list made up of tuples'
-        Stock.num_stocks = Stock.num_stocks +1
-        'instance tracking'
+        self.stock_tracking()
         
     
     def stock_tracking(self):
-        return Stock.num_stocks
+        Stock.num_stocks = Stock.num_stocks +1
 
     def update(self, timestamp, price):
         if price < 0:
@@ -81,13 +79,12 @@ class Stock:
         if risk < low_risk:
             return ':-) low volatility past'
         elif risk < high_risk:
-            return ':-| moderate volatility past'
+            return ':-| moderately volatile past'
         else:
             return ':-( very volatile past'
 
-class Analyst(Stock):
+class Analyst():
     def __init__(self, analyst):
-        super().__init__(analyst)
         self.analyst = analyst
     
 

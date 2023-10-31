@@ -28,4 +28,9 @@
 9. <p>UML diagrams go here: a simplified overview of an application</p>
     <img src ="img/horoscope.PNG"></img>
 10. <p>The classes in detail</p>
+<ul>
+<li>data retriever will provide stocks available for sale</li>
+<li>customer will aquire the stocks of intereset</li>
+<li>stock class will be used to provide insight into each stock</li> 
+</ul>
 </div>

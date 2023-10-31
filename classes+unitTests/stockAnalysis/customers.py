@@ -14,9 +14,12 @@ class customer():
         self.id = customer.number_of_customers
         customer.customers.append((self.id, self.name))
     
-    def customer_investment(self, stock, price, count):
+    def buy(self, stock, price, count):
         self.portolio.append((stock, price, count))
-
+        #should link this to a date
+    def value_at_stake():
+        #link to current price and calculate difference
+        pass
 'calculate profit'
 'taxes'
 'rebalancing'
@@ -30,7 +33,7 @@ customer1 = customer("jens")
 customer2 = customer("mary")
 'buying stocks'
 print('******************customer buys******************')
-customer1.customer_investment("google", 20, 4)
+customer1.buy("google", 20, 4)
 print(customer1.name,customer1.portolio)
 'our customers'
 print('****************Customers********************')

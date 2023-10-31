@@ -1,10 +1,11 @@
 'using the the stock and dataRetriever modules'
 from dataRetriever import DataRetriever
-from stock import Analyst
+from stock import Stock, Analyst
+
 
 def main():
     'Instantiate data object'
-    data_retriever = DataRetriever(r"stockAnalysis\\Book2.xlsx")
+    data_retriever = DataRetriever(r"..\stockAnalysis\\Book2.xlsx")
 
     'instantiate stock using data'
     stocks = data_retriever.instantiate_stock_from_data()
@@ -12,7 +13,7 @@ def main():
 
     'if succeful, apply object methods'
     if stocks:
-        user = Analyst(input('Please enter user name: '))
+        user = Analyst(input("Enter user name: "))
         print("Not Financial Advice")
         print("**************")
     
@@ -27,12 +28,16 @@ def main():
     else:
         print("error")
 
-    print(f'Currently tracking {stock.stock_tracking()} stocks.')
+    print(f'Currently tracking {Stock.num_stocks} stocks')
+    
     if user.analyst:
         print(f'Analysis performed by {user.analyst}')
     else: 
-        print(f'Analysis performed by{stock.analyst}')
-print("=====================================================")
+        print(f'Analysis performed by {Stock.analyst}') 
+
+
+    
+    print("=====================================================")
 
 if __name__ == "__main__":
     main()
