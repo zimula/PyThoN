@@ -43,13 +43,17 @@ def create_form():
 
     
 
-    update_button = Rectangle(Point(1.7,6.5),Point(3, 7))
-    update_button_label = Text(update_button.getCenter(), "Update")
-    update_button.setFill("black")
+    update_button = Rectangle(Point(1.7,5),Point(3, 6))
+    update_button_label = Text(update_button.getCenter(), "Enter to Update")
+    update_button.setWidth(40)
     update_button_label.setTextColor("white")
+    update_button_label.setStyle('bold')
 
     update_button.draw(win)
     update_button_label.draw(win)
+
+    warning_lable = Text(Point(6, 9.7), "Creates txt in folder to save persons")
+    warning_lable.draw(win)
 
     details_text = Text(Point(6,9), "result")
     details_text.setSize(12)
@@ -76,29 +80,57 @@ def update_table(table, persons):
         table_text  += f'ID: {person.id}, Name: {person.name}, Age: {person.age}\n'
     table.setText(table_text)
 
+def save2record(filename, persons):
+    with open(filename, 'w') as file:
+        for person in persons:
+            file.write(f'ID: {person.id}, Name: {person.name}, Age: {person.age}\n')
+
+def load_instances(filename):
+    persons = []
+    try:
+        with open(filename, 'r') as file:
+            for line in file:
+                parts = line.strip().split(',')
+                if len(parts) == 3:
+                    id, name, age = parts
+                    try:
+                        age = int(age.split(': ')[1])
+                        name = str(name.split(': ')[1])
+                        persons.append(Person(name, age))
+                    except ValueError:
+                        continue
+    except FileNotFoundError:
+        pass
+    return persons    
+
 
 
 
 def main():
     #references to hold return values from create_form()
     win, name_entry, age_entry, update_button, detail_text, table, table_color = create_form()
+    #load instances from file and update table. 
+    Person.pesons = load_instances('Persons.txt')
+    update_table(table, Person.pesons)
     try:
-        while True:
+       """  while True:
             click_point = win.getMouse()
             if update_button.getP1().getX() <= click_point.getX() <= update_button.getP2().getX() \
-            and update_button.getP1().getY() <= click_point.getY() <= update_button.getP2().getY():
+            and update_button.getP1().getY() <= click_point.getY() <= update_button.getP2().getY(): """
+       #using key return key instead of click.
+       while True:
+            key = win.getKey()
+            if key == 'Return':  
                 name = name_entry.getText()
                 age = age_entry.getText()
                 if name and age:
                     new_person = Person(name, age)
                     detail_text.setText(f'Created person: Name: {new_person.name}, Age: {new_person.age}, ID: {new_person.id}')
                     update_table(table, Person.pesons)
-
-                    
-            time.sleep(2)
-            detail_text.setText("")
-            age_entry.setText("")
-            name_entry.setText("")
+                detail_text.setText("")
+                age_entry.setText("")
+                name_entry.setText("")
+                save2record("Persons.txt", Person.pesons)
 
     except GraphicsError:
         win.close()
