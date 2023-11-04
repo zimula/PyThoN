@@ -8,11 +8,20 @@ class Person():
         Person.no_of_instances +=1
         self.__id = Person.no_of_instances
         Person.persons.append(self)
+    
+    @staticmethod
+    def present(id):
+        for person in Person.persons:
+            if str(person.getID()) == id:
+                return person
+        return None
+
     def getID(self):
         return self.__id
     
     def deleteByID(self):
         Person.persons.remove(self)
+
     
     """ #the setter will look like this
     def fixID(self,newID):
@@ -23,3 +32,6 @@ print(person1.getID())
 for i in Person.persons:
     print(i.getID())
 print(Person.no_of_instances) """
+""" Person.deleteByID(Person.persons, 2) """
+
+

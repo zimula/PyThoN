@@ -8,15 +8,22 @@ class Form():
         win.setCoords(0,0,10,10)
         win.setBackground("orangered")
         #labels and entry field
-        age_label = Text(Point(1,7.5), "Age:")
-        age_label.setSize(12)
+        
+        age_label = Text(Point(0.5,7.5), "Age:")
+        age_label.setSize(10)
         age_label.setStyle("bold")
         age_label.draw(win)
         age_entry = Entry(Point(2.4,7.5), 12)
         age_entry.draw(win)
+
+        id2delete_lable = Text(Point(1.4,2.5), "Enter ID to delete")
+        id2delete = Entry(Point(3,2.5),4)
+        id2delete_lable.setSize(10)
+        id2delete_lable.draw(win)
+        id2delete.draw(win)
         
-        name_label = Text(Point(1,8), "Name:")
-        name_label.setSize(12)
+        name_label = Text(Point(0.5,8), "Name:")
+        name_label.setSize(10)
         name_label.setStyle("bold")
         name_label.draw(win)
         name_entry = Entry(Point(2.4,8), 12)
@@ -27,7 +34,7 @@ class Form():
         update_button.setWidth(40)
         update_button_label.setTextColor("white")
         update_button_label.setStyle('bold')
-
+        update_button_label.setSize(10)
         update_button.draw(win)
         update_button_label.draw(win)
 
@@ -45,12 +52,12 @@ class Form():
         table_color.draw(win)
 
         table = Text(Point(6,5), "")
-        table.setSize(12)
+        table.setSize(8)
         table.setTextColor("white")
         table.setStyle("bold")
         table.draw(win)
         
-        return win, name_entry, age_entry, update_button, details_text, table, table_color
+        return win, name_entry, age_entry, id2delete, update_button, details_text, table, table_color
     
     def updateTable(persons, table):
         tableText = 'People \n'

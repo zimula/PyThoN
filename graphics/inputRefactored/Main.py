@@ -5,7 +5,7 @@ from Person import Person
 from CreateForm import Form
 
 def main():
-    win, name_entry, age_entry, update_button, details_text, table, table_color = Form.create_form()
+    win, name_entry, age_entry, id2delete, update_button, details_text, table, table_color = Form.create_form()
     Person.persons = DataManager.getData('Persons.txt')
     Form.updateTable(Person.persons, table)
     
@@ -24,10 +24,17 @@ def main():
                 age_entry.setText('')
                 details_text.setText('')
                 DataManager.saveData(Person.persons, 'Persons.txt')
-            elif key == 'd':
-                #field to hold id to delete.
-                Person.deleteByID('field value')
-    
+            elif key == 'Delete':
+                recordID = id2delete.getText()
+                record = Person.present(recordID)
+                if record:
+                    record.deleteByID()
+                    details_text.setText(f'Deleted person: ID: {record.getID()}, Name: {record.name}, Age: {record.age}')
+                    Form.updateTable(Person.persons, table)
+                    DataManager.saveData(Person.persons, 'Persons.txt')
+                    time.sleep(2)
+                    id2delete.setText("")
+                    details_text.setText("")
     except KeyError:
         print('keys')
     except GraphicsError:
