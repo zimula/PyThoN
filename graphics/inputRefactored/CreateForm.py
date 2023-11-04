@@ -31,7 +31,7 @@ class Form():
         update_button.draw(win)
         update_button_label.draw(win)
 
-        warning_lable = Text(Point(6, 9.7), "Creates txt in folder to save persons")
+        warning_lable = Text(Point(6, 9.7), "Creates txt file in folder to save persons")
         warning_lable.draw(win)
 
         details_text = Text(Point(6,9), "result")
@@ -51,3 +51,9 @@ class Form():
         table.draw(win)
         
         return win, name_entry, age_entry, update_button, details_text, table, table_color
+    
+    def updateTable(persons, table):
+        tableText = 'People \n'
+        for person in persons:
+            tableText += f'ID: {person.getID()}, Name: {person.name}, Age: {person.age}\n'
+        table.setText(tableText)

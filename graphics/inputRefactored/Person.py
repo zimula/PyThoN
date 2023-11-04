@@ -11,6 +11,9 @@ class Person():
     def getID(self):
         return self.__id
     
+    def deleteByID(self):
+        Person.persons.remove(self)
+    
     """ #the setter will look like this
     def fixID(self,newID):
         self.__id = newID """
