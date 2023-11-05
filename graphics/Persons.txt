@@ -1,7 +1,4 @@
-ID: 1, Name: Isaac, Age: 30
-ID: 2, Name: Niels, Age: 90
-ID: 3, Name: Troels, Age: 45
-ID: 4, Name: Dennis, Age: 56
-ID: 5, Name: Martin , Age: 77
-ID: 6, Name: George, Age: 39
-ID: 7, Name: Khassim, Age: 42
+ID: 1, Name: Niels, Age: 90
+ID: 2, Name: Troels, Age: 45
+ID: 3, Name: Martin , Age: 77
+ID: 5, Name: Khassim, Age: 42

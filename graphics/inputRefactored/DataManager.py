@@ -21,7 +21,6 @@ class DataManager():
                             continue
         except FileNotFoundError:
             pass
-            file.close
         return persons
 
     @staticmethod

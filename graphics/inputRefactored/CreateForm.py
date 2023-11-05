@@ -17,9 +17,13 @@ class Form():
         age_entry.draw(win)
 
         id2delete_lable = Text(Point(1.4,2.5), "Enter ID to delete")
+        id2delete_lable2 = Text(Point(1.4,2), "Press Delete")
+        id2delete_lable2.setSize(10)
         id2delete = Entry(Point(3,2.5),4)
         id2delete_lable.setSize(10)
         id2delete_lable.draw(win)
+        id2delete_lable2.draw(win)
+
         id2delete.draw(win)
         
         name_label = Text(Point(0.5,8), "Name:")
