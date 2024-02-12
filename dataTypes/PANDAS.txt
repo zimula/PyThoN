@@ -47,7 +47,9 @@ LABELS:a way to change the index label
 		cats = {'Tom': 7,'Jerry': 4,'Monty': 12}
 		var_i = pd.Series(cats)
 		
-DATA CLEANING:
+DATA CLEANING:fixing bad data in data set. 
+	- e.g empty cells, wrong format, duplicates (data.csv)
+	- 
 
 	
 	

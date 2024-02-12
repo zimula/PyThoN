@@ -1,0 +1,101 @@
+SYSTEM UDVIKLING
+
+
+
+EXAM	
+1. Software Testing, unittest
+	-	overblik over software testing fire hoveddiscipliner
+	-	unit testing via python (py unittest)
+		a. overblik
+		b. formål
+		c. kode
+		d. relatere til examsprojektet
+	NOTES:
+	1.1. 
+=================================================================================
+2. Software testing, pytest
+	- overblik over software testing fire hoveddiscipliner
+	- unit testing via python (pytest)
+		a. overblik
+		b. formål
+		c. kode
+		d. relatere til examsprojektet
+	NOTES:
+	2.1.
+===================================================================================
+3. Software testing, selenium
+	- overblik over software testing fire hoveddiscipliner
+		a. overordnet om software testing
+		b. typer af software testing
+		c. selenium
+			i. hvad
+				- sofer til at teste web applikationer 
+				- hvad er web applikationer 
+				- 
+			ii. formål
+			iii. hvordan
+	- unit testing af web applikationer via selenium (unittest/ pytest)
+		a. overblik
+		b. formål
+		c. kode
+		d. relatere til examsprojektet
+	NOTES:
+	3.1.
+===================================================================================
+4. Software testing, integration test
+	- overblik over software testing fire hoveddiscipliner
+		a. overordnet om software testing
+		b. typer af software testing
+		c. integration testing
+			i. hvad
+				- nøgle ordet er integration (samspil mellem flere dele)
+				- en måde undersøge hele applikationen samt eksterne kilder
+				- skiller sig fra unit tests ved at undersøge flere dele. 
+				- disse kan enten være en del af applikationen eller eksterne kilder.
+				- ingen grund til at estimation
+				- eksterne kilder kan erstattes
+			ii. formål
+				- rest api endpoint: foretage sig noget og sender noget tilbage (update (https://todo.pixegami.io/))
+				- skalerbare og automatisk testing
+				- test funktionalitet under forskellige scenarier
+			iii. hvordan
+				- test api response (https://todo.pixegami.io)
+						a. test.py
+							ENDPOINT = "https://todo.pixegami.io/"
+							response = request.get(ENDPOINT)
+							print(response) 
+								- should return <Response[200]>
+					*************************************
+				- bruge api endpoint med crud 
+				- pytest 
+				- verbosity option
+				- test crud operations
+					i. setup tests for each operation
+						a. status
+							def test_call():
+								response = request.get(EndPoint)
+								assert response.status_code == 200
+						b. put
+						c. read
+						d. update
+						e. delete
+	- test af web api(link givet)
+		a. bruge givet link
+		d. relatere til examsprojektet
+	NOTES: 
+	4.1.
+====================================================================================	
+5. Brugerrejser
+	- overblik over vigtigste elementer af brugerrejse
+		a. overordnet om brugerrejser
+			i. hvad
+				visuel og kronologisk fremstilling af en brugers oplevelse med at interagere
+				med et produkt eller service. 
+			ii. 
+		b. formål
+		c. hvordan 
+	- brugerrejse som værktøj
+	- eksempler
+	- relatere til examsprojektet
+	NOTES:
+	5.1. 
